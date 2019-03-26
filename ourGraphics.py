@@ -13,6 +13,11 @@ sky = Rectangle(Point(0, 0), Point(winSz, winSz))
 sky.setFill(color_rgb(50, 100, 150))
 sky.draw(NPwin)
 
+#Draws snow covered floor
+floor = Rectangle(Point(0, 0), Point(winSz, 200))
+floor.setFill("white")
+floor.draw(NPwin)
+
 #Closes window with user click
 NPwin.getMouse()
 NPwin.close()
