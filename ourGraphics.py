@@ -31,6 +31,13 @@ pbHead.draw(NPwin)
 pbNose = Oval(Point(510, 220), Point(530, 210))
 pbNose.setFill("black")
 pbNose.draw(NPwin)
+###Eyeballs
+pbEB1 = Circle(Point(505, 235), 5)
+pbEB1.setFill("white")
+pbEB1.draw(NPwin)
+pbEB2 = Circle(Point(535, 235), 5)
+pbEB2.setFill("white")
+pbEB2.draw(NPwin)
 
 #Closes window with user click
 NPwin.getMouse()
