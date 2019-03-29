@@ -38,6 +38,13 @@ pbEB1.draw(NPwin)
 pbEB2 = Circle(Point(535, 235), 5)
 pbEB2.setFill("white")
 pbEB2.draw(NPwin)
+####Irises
+pbIris1 = Circle(Point(505, 235), 2)
+pbIris1.setFill("black")
+pbIris1.draw(NPwin)
+pbIris2 = Circle(Point(535, 235), 2)
+pbIris2.setFill("black")
+pbIris2.draw(NPwin)
 
 #Closes window with user click
 NPwin.getMouse()
