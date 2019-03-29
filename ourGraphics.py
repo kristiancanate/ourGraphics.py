@@ -23,6 +23,10 @@ floor.draw(NPwin)
 pbBody = Oval(Point(500, 250), Point(800, 100))
 pbBody.setFill("azure")
 pbBody.draw(NPwin)
+##Head
+pbHead = Circle(Point(520, 220), 40)
+pbHead.setFill("azure")
+pbHead.draw(NPwin)
 
 #Closes window with user click
 NPwin.getMouse()
