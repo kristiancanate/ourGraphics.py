@@ -27,6 +27,10 @@ pbBody.draw(NPwin)
 pbHead = Circle(Point(520, 220), 40)
 pbHead.setFill("azure")
 pbHead.draw(NPwin)
+###Nose
+pbNose = Oval(Point(510, 220), Point(530, 210))
+pbNose.setFill("black")
+pbNose.draw(NPwin)
 
 #Closes window with user click
 NPwin.getMouse()
