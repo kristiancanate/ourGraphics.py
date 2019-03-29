@@ -45,6 +45,10 @@ pbIris1.draw(NPwin)
 pbIris2 = Circle(Point(535, 235), 2)
 pbIris2.setFill("black")
 pbIris2.draw(NPwin)
+###Mouth
+pbMouth = Oval(Point(505, 200), Point(535, 195))
+pbMouth.setFill("pink")
+pbMouth.draw(NPwin)
 
 #Closes window with user click
 NPwin.getMouse()
