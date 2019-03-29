@@ -18,6 +18,12 @@ floor = Rectangle(Point(0, 0), Point(winSz, 200))
 floor.setFill("white")
 floor.draw(NPwin)
 
+#Draws polar bear
+##Body
+pbBody = Oval(Point(500, 250), Point(800, 100))
+pbBody.setFill("azure")
+pbBody.draw(NPwin)
+
 #Closes window with user click
 NPwin.getMouse()
 NPwin.close()
