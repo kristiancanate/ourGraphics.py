@@ -23,6 +23,13 @@ floor.draw(NPwin)
 pbBody = Oval(Point(500, 250), Point(800, 100))
 pbBody.setFill("azure")
 pbBody.draw(NPwin)
+##Ears
+pbEar1 = Oval(Point(500, 270), Point(510, 240))
+pbEar1.setFill("azure")
+pbEar1.draw(NPwin)
+pbEar2 = Oval(Point(530, 270), Point(540, 240))
+pbEar2.setFill("azure")
+pbEar2.draw(NPwin)
 ##Head
 pbHead = Circle(Point(520, 220), 40)
 pbHead.setFill("azure")
