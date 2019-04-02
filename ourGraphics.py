@@ -13,6 +13,11 @@ sky = Rectangle(Point(0, 0), Point(winSz, winSz))
 sky.setFill(color_rgb(50, 100, 150))
 sky.draw(NPwin)
 
+#Drawing Mountain
+Mountain= Polygon(Point(0,200), Point(350,0), Point(150,600))
+Mountain.setFill(color_rgb(60,130,100))
+Mountain.draw(NPwin)
+
 #Draws snow covered floor
 floor = Rectangle(Point(0, 0), Point(winSz, 200))
 floor.setFill("white")
