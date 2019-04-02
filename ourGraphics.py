@@ -13,13 +13,19 @@ sky = Rectangle(Point(0, 0), Point(winSz, winSz))
 sky.setFill(color_rgb(50, 100, 150))
 sky.draw(NPwin)
 
+#Drawing Between Mountain
+Smallmountain= Polygon(Point(100,200), Point(460,200), Point(260,500))
+Smallmountain.setFill(color_rgb(80,100,125))
+Smallmountain.draw(NPwin)
+
+#Drawing Between mountain 2
+Smallmountain2= Polygon(Point(
+
+
 #Drawing Mountain
 Mountain= Polygon(Point(0,200), Point(350,0), Point(90,550))
 Mountain.setFill(color_rgb(60,130,100))
 Mountain.draw(NPwin)
-
-#Drawing Between Mountain
-Smallmountain=
 
 #Drawing Mountain 2
 Mountain2= Polygon(Point(150,0),Point(600,0),Point(410,550))
