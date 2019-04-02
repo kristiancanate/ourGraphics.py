@@ -14,14 +14,22 @@ sky.setFill(color_rgb(50, 100, 150))
 sky.draw(NPwin)
 
 #Drawing Mountain
-Mountain= Polygon(Point(0,200), Point(350,0), Point(150,600))
+Mountain= Polygon(Point(0,200), Point(350,0), Point(90,550))
 Mountain.setFill(color_rgb(60,130,100))
 Mountain.draw(NPwin)
 
+#Drawing Between Mountain
+Smallmountain=
+
 #Drawing Mountain 2
-Mountain2= Polygon(Point(340,0),Point(560,0),Point(430,550))
+Mountain2= Polygon(Point(150,0),Point(600,0),Point(410,550))
 Mountain2.setFill(color_rgb(60,130,100))
 Mountain2.draw(NPwin)
+
+#Drawing Mountain 3
+Mountain3= Polygon(Point(420,0),Point(950,0), Point(750,600))
+Mountain3.setFill(color_rgb(60,130,100))
+Mountain3.draw(NPwin)
 
 #Draws snow covered floor
 floor = Rectangle(Point(0, 0), Point(winSz, 200))
