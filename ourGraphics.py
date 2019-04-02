@@ -19,6 +19,19 @@ floor.setFill("white")
 floor.draw(NPwin)
 
 #Draws polar bear
+##Legs
+pbLeg1 = Oval(Point(530, 175), Point(570, 75))
+pbLeg1.setFill("azure")
+pbLeg1.draw(NPwin)
+pbLeg2 = Oval(Point(580, 175), Point(620, 50))
+pbLeg2.setFill("azure")
+pbLeg2.draw(NPwin)
+pbLeg3 = Oval(Point(720, 175), Point(760, 75))
+pbLeg3.setFill("azure")
+pbLeg3.draw(NPwin)
+pbLeg4 = Oval(Point(770, 175), Point(810, 50))
+pbLeg4.setFill("azure")
+pbLeg4.draw(NPwin)
 ##Tail
 pbTail = Circle(Point(780, 230), 20)
 pbTail.setFill("azure")
