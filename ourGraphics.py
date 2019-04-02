@@ -18,6 +18,11 @@ Mountain= Polygon(Point(0,200), Point(350,0), Point(150,600))
 Mountain.setFill(color_rgb(60,130,100))
 Mountain.draw(NPwin)
 
+#Drawing Mountain 2
+Mountain2= Polygon(Point(340,0),Point(560,0),Point(430,550))
+Mountain2.setFill(color_rgb(60,130,100))
+Mountain2.draw(NPwin)
+
 #Draws snow covered floor
 floor = Rectangle(Point(0, 0), Point(winSz, 200))
 floor.setFill("white")
