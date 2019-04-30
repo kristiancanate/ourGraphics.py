@@ -4,6 +4,11 @@ from graphics import *
 #Initializing variables
 winSz = 900
 
+def draw_mntn(x1, y1, x2, y2, x3, y3, rCol, bCol):
+    Mountain = Polygon(Point(x1, y1), Point(x2, y2), Point(x3, y3))
+    Mountain.setFill(color_rgb(rCol, 100, bCol))
+    Mountain.draw(NPwin)
+
 #Defining Window
 NPwin = GraphWin("North Pole", winSz, winSz)
 NPwin.setCoords(0, 0, winSz, winSz)
@@ -13,30 +18,12 @@ sky = Rectangle(Point(0, 0), Point(winSz, winSz))
 sky.setFill(color_rgb(50, 100, 150))
 sky.draw(NPwin)
 
-#Drawing Between Mountain
-Smallmountain= Polygon(Point(100,200), Point(460,200), Point(260,500))
-Smallmountain.setFill(color_rgb(80,100,125))
-Smallmountain.draw(NPwin)
-
-#Drawing Between mountain 2
-Smallmountain2= Polygon(Point(420,200),Point(970,0), Point(550,500))
-Smallmountain2.setFill(color_rgb(80,100,125))
-Smallmountain2.draw(NPwin)
-
-#Drawing Mountain
-Mountain= Polygon(Point(0,200), Point(350,0), Point(90,550))
-Mountain.setFill(color_rgb(60,100,110))
-Mountain.draw(NPwin)
-
-#Drawing Mountain 2
-Mountain2= Polygon(Point(150,0),Point(600,0),Point(410,550))
-Mountain2.setFill(color_rgb(60,100,110))
-Mountain2.draw(NPwin)
-
-#Drawing Mountain 3
-Mountain3= Polygon(Point(420,0),Point(950,0), Point(750,600))
-Mountain3.setFill(color_rgb(60,100,110))
-Mountain3.draw(NPwin)
+#Draw mountains
+draw_mntn(100, 200, 460, 200, 260, 500, 80, 125) #Drawing Between Mountain
+draw_mntn(420, 200, 970, 0, 550, 500, 80, 125)#Drawing Between mountain 2
+draw_mntn(0, 200, 350, 0, 90, 550, 60, 110)#Drawing Mountain
+draw_mntn(150, 0, 600, 0, 410, 550, 60, 110)#Drawing Mountain 2
+draw_mntn(420, 0, 950, 0, 750, 600, 60, 110)#Drawing Mountain 3
 
 #Draws snow covered floor
 floor = Rectangle(Point(0, 0), Point(winSz, 200))
