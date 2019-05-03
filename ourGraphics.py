@@ -6,10 +6,17 @@ winSz = 900
 gray = color_rgb(80, 100, 125)
 green = color_rgb(60, 100, 110)
 
-def draw_mntn(x1, y1, x2, y2, x3, y3, col):
-    Mountain = Polygon(Point(x1, y1), Point(x2, y2), Point(x3, y3))
-    Mountain.setFill(col)
-    Mountain.draw(NPwin)
+def draw_poly(x1, y1, x2, y2, x3, y3, col):
+    polygon = Polygon(Point(x1, y1), Point(x2, y2), Point(x3, y3))
+    polygon.setFill(col)
+    polygon.draw(NPwin)
+    
+def draw_mntn():
+    draw_poly(100, 200, 460, 200, 260, 500, gray) #Drawing Between Mountain
+    draw_poly(420, 200, 970, 0, 550, 500, gray) #Drawing Between mountain 2
+    draw_poly(0, 200, 350, 0, 90, 550, green) #Drawing Mountain
+    draw_poly(150, 0, 600, 0, 410, 550, green) #Drawing Mountain 2
+    draw_poly(420, 0, 950, 0, 750, 600, green) #Drawing Mountain 3
 
 #Defining Window
 NPwin = GraphWin("North Pole", winSz, winSz)
@@ -21,11 +28,7 @@ sky.setFill(color_rgb(50, 100, 150))
 sky.draw(NPwin)
 
 #Draw mountains
-draw_mntn(100, 200, 460, 200, 260, 500, gray) #Drawing Between Mountain
-draw_mntn(420, 200, 970, 0, 550, 500, gray)#Drawing Between mountain 2
-draw_mntn(0, 200, 350, 0, 90, 550, green)#Drawing Mountain
-draw_mntn(150, 0, 600, 0, 410, 550, green)#Drawing Mountain 2
-draw_mntn(420, 0, 950, 0, 750, 600, green)#Drawing Mountain 3
+draw_mntn()
 
 #Draws snow covered floor
 floor = Rectangle(Point(0, 0), Point(winSz, 200))
