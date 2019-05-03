@@ -45,6 +45,32 @@ def draw_bckgrnd():
     draw_mntn()
     draw_floor()
 
+def draw_pBear():
+    ##Legs
+    draw_oval(530, 175, 570, 75, "azure")
+    draw_oval(580, 175, 620, 50, "azure")
+    draw_oval(720, 175, 760, 75, "azure")
+    draw_oval(770, 175, 810, 50, "azure")
+    ##Tail
+    draw_cir(780, 230, 20, "azure")
+    ##Body
+    draw_oval(500, 250, 800, 100, "azure")
+    ##Ears
+    draw_oval(500, 270, 510, 240, "azure")
+    draw_oval(530, 270, 540, 240, "azure")
+    ##Head
+    draw_cir(520, 220, 40, "azure")
+    ###Nose
+    draw_oval(510, 220, 530, 210, "black")
+    ###Eyeballs
+    draw_cir(505, 235, 5, "white")
+    draw_cir(535, 235, 5, "white")
+    ####Irises
+    draw_cir(505, 235, 2, "black")
+    draw_cir(535, 235, 2, "black")
+    ###Mouth
+    draw_oval(505, 200, 535, 195, "pink")
+    
 #Defining Window
 NPwin = GraphWin("North Pole", winSz, winSz)
 NPwin.setCoords(0, 0, winSz, winSz)
@@ -53,30 +79,7 @@ NPwin.setCoords(0, 0, winSz, winSz)
 draw_bckgrnd()
 
 #Draws polar bear
-##Legs
-draw_oval(530, 175, 570, 75, "azure")
-draw_oval(580, 175, 620, 50, "azure")
-draw_oval(720, 175, 760, 75, "azure")
-draw_oval(770, 175, 810, 50, "azure")
-##Tail
-draw_cir(780, 230, 20, "azure")
-##Body
-draw_oval(500, 250, 800, 100, "azure")
-##Ears
-draw_oval(500, 270, 510, 240, "azure")
-draw_oval(530, 270, 540, 240, "azure")
-##Head
-draw_cir(520, 220, 40, "azure")
-###Nose
-draw_oval(510, 220, 530, 210, "black")
-###Eyeballs
-draw_cir(505, 235, 5, "white")
-draw_cir(535, 235, 5, "white")
-####Irises
-draw_cir(505, 235, 2, "black")
-draw_cir(535, 235, 2, "black")
-###Mouth
-draw_oval(505, 200, 535, 195, "pink")
+draw_pBear()
 
 #Closes window with user click
 NPwin.getMouse()
