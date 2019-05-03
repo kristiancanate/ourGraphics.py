@@ -22,6 +22,11 @@ def draw_oval(x1, y1, x2, y2, col):
     oval.setFill(col)
     oval.draw(NPwin)
 
+def draw_cir(x, y, rad, col):
+    pbTail = Circle(Point(x, y), rad)
+    pbTail.setFill(col)
+    pbTail.draw(NPwin)
+
 def draw_sky():
     draw_rec(0, 0, winSz, winSz, blue)
 
@@ -54,34 +59,22 @@ draw_oval(580, 175, 620, 50, "azure")
 draw_oval(720, 175, 760, 75, "azure")
 draw_oval(770, 175, 810, 50, "azure")
 ##Tail
-pbTail = Circle(Point(780, 230), 20)
-pbTail.setFill("azure")
-pbTail.draw(NPwin)
+draw_cir(780, 230, 20, "azure")
 ##Body
 draw_oval(500, 250, 800, 100, "azure")
 ##Ears
 draw_oval(500, 270, 510, 240, "azure")
 draw_oval(530, 270, 540, 240, "azure")
 ##Head
-pbHead = Circle(Point(520, 220), 40)
-pbHead.setFill("azure")
-pbHead.draw(NPwin)
+draw_cir(520, 220, 40, "azure")
 ###Nose
 draw_oval(510, 220, 530, 210, "black")
 ###Eyeballs
-pbEB1 = Circle(Point(505, 235), 5)
-pbEB1.setFill("white")
-pbEB1.draw(NPwin)
-pbEB2 = Circle(Point(535, 235), 5)
-pbEB2.setFill("white")
-pbEB2.draw(NPwin)
+draw_cir(505, 235, 5, "white")
+draw_cir(535, 235, 5, "white")
 ####Irises
-pbIris1 = Circle(Point(505, 235), 2)
-pbIris1.setFill("black")
-pbIris1.draw(NPwin)
-pbIris2 = Circle(Point(535, 235), 2)
-pbIris2.setFill("black")
-pbIris2.draw(NPwin)
+draw_cir(505, 235, 2, "black")
+draw_cir(535, 235, 2, "black")
 ###Mouth
 draw_oval(505, 200, 535, 195, "pink")
 
