@@ -30,18 +30,17 @@ def draw_mntn():
     draw_poly(150, 0, 600, 0, 410, 550, green) #Drawing Mountain 2
     draw_poly(420, 0, 950, 0, 750, 600, green) #Drawing Mountain 3
 
+def draw_bckgrnd():
+    draw_sky()
+    draw_mntn()
+    draw_floor()
+
 #Defining Window
 NPwin = GraphWin("North Pole", winSz, winSz)
 NPwin.setCoords(0, 0, winSz, winSz)
 
-#Drawing sky background
-draw_sky()
-
-#Draw mountains
-draw_mntn()
-
-#Draws snow covered floor
-draw_floor()
+#Draws sky, floor and mountains
+draw_bckgrnd()
 
 #Draws polar bear
 ##Legs
