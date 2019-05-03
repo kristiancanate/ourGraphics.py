@@ -5,12 +5,24 @@ from graphics import *
 winSz = 900
 gray = color_rgb(80, 100, 125)
 green = color_rgb(60, 100, 110)
+blue = color_rgb(50, 100, 150)
 
 def draw_poly(x1, y1, x2, y2, x3, y3, col):
-    polygon = Polygon(Point(x1, y1), Point(x2, y2), Point(x3, y3))
-    polygon.setFill(col)
-    polygon.draw(NPwin)
-    
+    poly = Polygon(Point(x1, y1), Point(x2, y2), Point(x3, y3))
+    poly.setFill(col)
+    poly.draw(NPwin)
+
+def draw_rec(x1, y1, x2, y2, col):
+    rec = Rectangle(Point(x1, y1), Point(x2, y2))
+    rec.setFill(col)
+    rec.draw(NPwin)
+
+def draw_sky():
+    draw_rec(0, 0, winSz, winSz, blue)
+
+def draw_floor():
+    draw_rec(0, 0, winSz, 200, "white")
+
 def draw_mntn():
     draw_poly(100, 200, 460, 200, 260, 500, gray) #Drawing Between Mountain
     draw_poly(420, 200, 970, 0, 550, 500, gray) #Drawing Between mountain 2
@@ -23,17 +35,13 @@ NPwin = GraphWin("North Pole", winSz, winSz)
 NPwin.setCoords(0, 0, winSz, winSz)
 
 #Drawing sky background
-sky = Rectangle(Point(0, 0), Point(winSz, winSz))
-sky.setFill(color_rgb(50, 100, 150))
-sky.draw(NPwin)
+draw_sky()
 
 #Draw mountains
 draw_mntn()
 
 #Draws snow covered floor
-floor = Rectangle(Point(0, 0), Point(winSz, 200))
-floor.setFill("white")
-floor.draw(NPwin)
+draw_floor()
 
 #Draws polar bear
 ##Legs
