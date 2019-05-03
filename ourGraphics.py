@@ -17,6 +17,11 @@ def draw_rec(x1, y1, x2, y2, col):
     rec.setFill(col)
     rec.draw(NPwin)
 
+def draw_oval(x1, y1, x2, y2, col):
+    oval = Oval(Point(x1, y1), Point(x2, y2))
+    oval.setFill(col)
+    oval.draw(NPwin)
+
 def draw_sky():
     draw_rec(0, 0, winSz, winSz, blue)
 
@@ -44,41 +49,25 @@ draw_bckgrnd()
 
 #Draws polar bear
 ##Legs
-pbLeg1 = Oval(Point(530, 175), Point(570, 75))
-pbLeg1.setFill("azure")
-pbLeg1.draw(NPwin)
-pbLeg2 = Oval(Point(580, 175), Point(620, 50))
-pbLeg2.setFill("azure")
-pbLeg2.draw(NPwin)
-pbLeg3 = Oval(Point(720, 175), Point(760, 75))
-pbLeg3.setFill("azure")
-pbLeg3.draw(NPwin)
-pbLeg4 = Oval(Point(770, 175), Point(810, 50))
-pbLeg4.setFill("azure")
-pbLeg4.draw(NPwin)
+draw_oval(530, 175, 570, 75, "azure")
+draw_oval(580, 175, 620, 50, "azure")
+draw_oval(720, 175, 760, 75, "azure")
+draw_oval(770, 175, 810, 50, "azure")
 ##Tail
 pbTail = Circle(Point(780, 230), 20)
 pbTail.setFill("azure")
 pbTail.draw(NPwin)
 ##Body
-pbBody = Oval(Point(500, 250), Point(800, 100))
-pbBody.setFill("azure")
-pbBody.draw(NPwin)
+draw_oval(500, 250, 800, 100, "azure")
 ##Ears
-pbEar1 = Oval(Point(500, 270), Point(510, 240))
-pbEar1.setFill("azure")
-pbEar1.draw(NPwin)
-pbEar2 = Oval(Point(530, 270), Point(540, 240))
-pbEar2.setFill("azure")
-pbEar2.draw(NPwin)
+draw_oval(500, 270, 510, 240, "azure")
+draw_oval(530, 270, 540, 240, "azure")
 ##Head
 pbHead = Circle(Point(520, 220), 40)
 pbHead.setFill("azure")
 pbHead.draw(NPwin)
 ###Nose
-pbNose = Oval(Point(510, 220), Point(530, 210))
-pbNose.setFill("black")
-pbNose.draw(NPwin)
+draw_oval(510, 220, 530, 210, "black")
 ###Eyeballs
 pbEB1 = Circle(Point(505, 235), 5)
 pbEB1.setFill("white")
@@ -94,9 +83,7 @@ pbIris2 = Circle(Point(535, 235), 2)
 pbIris2.setFill("black")
 pbIris2.draw(NPwin)
 ###Mouth
-pbMouth = Oval(Point(505, 200), Point(535, 195))
-pbMouth.setFill("pink")
-pbMouth.draw(NPwin)
+draw_oval(505, 200, 535, 195, "pink")
 
 #Closes window with user click
 NPwin.getMouse()
